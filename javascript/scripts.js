@@ -2,7 +2,7 @@
 $(document).ready(function() {
     $("#header").load("reusables/header.html");
 
-    $("#footer").load("login.html");
+    $("#footer").load("reusables/footer.html");
 });
 
 $('.nav-item').click(function() {
