@@ -30,28 +30,15 @@
     <title>projectDetails</title>
 </head>
 <body>
-<<<<<<< HEAD
     <div class = "container" id="project_details">
         Details
-=======
-        <div id="header"></div>
-        <div style="display: flex; text-align: center;width: 100%;">
-                <div> Applied To
-                    <div id="personal-table"></div>
-                </div>
-                <div style="text-align: center;width: 100%;"> Pending
-                    <div id="personal-table"></div>
-                </div>
-            </div>
-    <div id="project_details">
-        deatails
->>>>>>> bbb6ddcf1f71628bd089c36d7ee49472d3d7059c
         <div id="json_deatils">
 
         </div>
     </div>
     <div id="footer"></div>
     <script>
+        console.log(localStorage.getItem("key"));
     fetch("data.json").then(response => response.json()
     .then(data => ({
         data: data,
@@ -61,13 +48,13 @@
         
         for(var keys in data.data.projects){
             let projects = data.data.projects
-            console.log(keys)
             $("#json_deatils").append("<div class = 'container'>"+projects+'<div>')
             
         }
         
         
     }));
+    //console.log(localStorage.getItem("firstname"));
     $(document).ready(function(){
         
     })

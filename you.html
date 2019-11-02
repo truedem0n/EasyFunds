@@ -84,24 +84,29 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script>
-      var projects;
+
+function reply_click(clicked_id)
+  {
+      console.log(clicked_id);
+      localStorage.setItem("key",clicked_id);
+  }
       fetch("data.json").then(response => response.json()
     .then(data => ({
         data: data,
         status: response.status
     }))
     .then(data=>{ 
-        console.log()
         const keys = Object.keys(data["data"]["projects"])
         $(document).ready(function(){
         for(const key of keys){
+          
           $("#projects").append(`<div style="display: flex; margin: 15px;;">
             <div class="card" style="width: 15rem;">
                 <img class="card-img-top" src="./img/d.jpeg" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">${key}</h5>
                   <p class="card-text">${data["data"]["projects"][key]["description"]}</p>
-                  <a href="projectDetails.html" class="btn btn-primary">See details</a>
+                  <a href="projectDetails.html" id="${key}" onClick="reply_click(this.id)" class="btn btn-primary">See details</a>
                 </div>
               </div>
         </div>`)
