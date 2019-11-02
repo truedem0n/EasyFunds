@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Gantt</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			background: #ccc;
+		}
+		.container {
+            width: 100%;
+            height: 100%;
+			margin: 0 auto;
+		}
+		/* custom class */
+		.gantt .bar-milestone .bar {
+			fill: rgb(12, 179, 12);
+		}
+	</style>
+	<link rel="stylesheet" href="dist/frappe-gantt.css" />
+	<script src="dist/frappe-gantt.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Gantt Chart</h2>
+		<div class="gantt-target"></div>
+	</div>
+	<script>
+		var tasks = [
+			{
+				start: '2018-10-01',
+				end: '2019-02-08',
+				name: 'Building Park',
+				id: "Project 1",
+				progress: 20
+			},
+			{
+				start: '2018-11-03',
+				end: '2019-01-08',
+				name: 'New Park for kids funding',
+				id: "Fund 1",
+				progress: 5,
+				dependencies: 'Project 1'
+            },
+            {
+                start: '2018-11-15',
+                end: '2018-12-05',
+                name:'Engeering Head Review',
+                id: "Review 1",
+                dependencies:'Fund 1'
+            },
+            {
+                start: '2018-12-01',
+                end: '2019-01-05',
+                name:'Marketing Team Review',
+                id: "Review 2",
+                dependencies:'Fund 1',
+                custom_class: 'bar-milestone'
+            },
+            {
+                start: '2018-12-04',
+                end: '2018-12-30',
+                name:'Designing Team Review',
+                id: "Review 3",
+                dependencies:'Fund 1'
+            },
+			{
+				start: '2018-10-04',
+				end: '2019-01-20',
+				name: 'Park for senior citizens',
+				id: "Fund 2",
+				progress: 10,
+				dependencies: 'Project 1'
+            },
+            {
+                start: '2018-10-04',
+                end: '2018-11-05',
+                name:'Engeering Head Review',
+                id: "Review 1",
+                dependencies:'Fund 2'
+            },
+            {
+                start: '2018-12-04',
+                end: '2019-01-05',
+                name:'Marketing Team Review',
+                id: "Review 2",
+                dependencies:'Fund 2',
+                custom_class: 'bar-milestone'
+            },
+            {
+                start: '2018-12-23',
+                end: '2019-01-05',
+                name:'Designing Team Review',
+                id: "Review 3",
+                dependencies:'Fund 2',
+                custom_class: 'bar-milestone'
+            },
+			{
+				start: '2018-07-08',
+				end: '2018-12-31',
+				name: 'Automated Garbage',
+				id: "Project 2",
+				progress: 5
+			},
+			{
+				start: '2018-07-23',
+				end: '2018-10-10',
+				name: 'Automated garbage Trucks Funding',
+				id: "Fund 3",
+				progress: 35,
+				dependencies: 'Project 2'
+            },
+            {
+                start: '2018-08-04',
+                end: '2018-10-05',
+                name:'Engeering Head Review',
+                id: "Review 1",
+                dependencies:'Fund 3'
+            },
+            {
+                start: '2018-08-14',
+                end: '2018-08-21',
+                name:'Marketing Team Review',
+                id: "Review 2",
+                dependencies:'Fund 3'
+            },
+            {
+                start: '2018-08-15',
+                end: '2018-08-27',
+                name:'Designing Team Review',
+                id: "Review 3",
+                dependencies:'Fund 3',
+                custom_class: 'bar-milestone'
+            },
+			{
+				start: '2018-10-11',
+				end: '2018-12-11',
+				name: 'Automated Garbage Awarness Funding',
+				id: "Fund 4",
+				progress: 79,
+				dependencies: 'Project 2'
+            },
+            {
+                start: '2018-10-13',
+                end: '2018-11-05',
+                name:'Engeering Head Review',
+                id: "Review 1",
+                dependencies:'Fund 4',
+                custom_class: 'bar-milestone'
+            },
+            {
+                start: '2018-10-13',
+                end: '2018-11-05',
+                name:'Marketing Team Review',
+                id: "Review 2",
+                dependencies:'Fund 4'
+            },
+            {
+                start: '2018-10-13',
+                end: '2018-11-05',
+                name:'Designing Team Review',
+                id: "Review 3",
+                dependencies:'Fund 4',
+                custom_class: 'bar-milestone'
+            },
+			{
+				start: '2018-10-05',
+				end: '2019-08-12',
+				name: 'Heated Side Walks',
+				id: "Project 3",
+				progress: 30
+            },
+            {
+                start: '2019-03-03',
+                end:'2019-07-12',
+                name:'Street Improvement Fund',
+                id:"Fund 5",
+                progress: 59,
+                dependencies: 'Project 3'
+            },
+            {
+                start: '2019-05-04',
+                end: '2019-05-30',
+                name:'Engeering Head Review',
+                id: "Review 1",
+                dependencies:'Fund 5'
+            },
+            {
+                start: '2019-06-04',
+                end: '2019-07-05',
+                name:'Marketing Team Review',
+                id: "Review 2",
+                dependencies:'Fund 5',
+                custom_class: 'bar-milestone'
+            },
+            {
+                start: '2019-03-04',
+                end: '2019-04-01',
+                name:'Designing Team Review',
+                id: "Review 3",
+                dependencies:'Fund 5'
+            },
+            {
+                start: '2018-11-05',
+                end:'2019-02-34',
+                name:'Winter Safety Fund',
+                id:'Fund 6',
+                progress: 88,
+                dependencies:'Project 3'
+            },
+            {
+                start: '2018-11-30',
+                end: '2018-12-13',
+                name:'Engeering Head Review',
+                id: "Review 1",
+                dependencies:'Fund 6',
+                custom_class: 'bar-milestone'
+            },
+            {
+                start: '2018-12-04',
+                end: '2018-12-31',
+                name:'Marketing Team Review',
+                id: "Review 2",
+                dependencies:'Fund 6'
+            },
+            {
+                start: '2018-12-20',
+                end: '2019-01-05',
+                name:'Designing Team Review',
+                id: "Review 3",
+                dependencies:'Fund 6',
+                custom_class: 'bar-milestone'
+            },
+		]
+		var gantt_chart = new Gantt(".gantt-target", tasks, {
+			on_click: function (task) {
+				console.log(task);
+			},
+			on_date_change: function(task, start, end) {
+				console.log(task, start, end);
+			},
+			on_progress_change: function(task, progress) {
+				console.log(task, progress);
+			},
+			on_view_change: function(mode) {
+				console.log(mode);
+			},
+			view_mode: 'Month',
+            language: 'en',
+            header_height: 50,
+            column_width: 30,
+            step: 24,
+            view_modes: ['Quarter Day', 'Half Day', 'Day', 'Week', 'Month'],
+            bar_height: 20,
+            bar_corner_radius: 3,
+            arrow_curve: 5,
+            padding: 18,  
+            date_format: 'YYYY-MM-DD',
+            custom_popup_html: null
+		});
+		console.log(gantt_chart);
+	</script>
+</body>
+</html>
