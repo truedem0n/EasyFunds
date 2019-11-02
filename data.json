@@ -35,19 +35,23 @@
                     "milestones":{
                         "singleContribution":{
                             "description":"lorem ipsum",
-                            "deadLine":"23-dec-2022"
+                            "deadLine":"23-dec-2022",
+                            "assignedTo":"Engneering Team"
                         },
                         "multipleContribution":{
                             "description":"lorem ipsum",
-                            "deadLine":"8-dec-2022"
+                            "deadLine":"8-dec-2022",
+                            "assignedTo":"Construction Team"
                         },
                         "purpose":{
                             "description":"lorem ipsum",
-                            "deadLine":"3-dec-2022"
+                            "deadLine":"3-dec-2022",
+                            "assignedTo":"Designing Team"
                         },
                         "projectTracking":{
                             "description":"lorem ipsum",
-                            "deadLine":"3-dec-2022"
+                            "deadLine":"3-dec-2022",
+                            "assignedTo":"Transportation Coordinator"
                         }    
                     }
                 }
@@ -64,19 +68,23 @@
                     "milestones":{
                         "singleContribution":{
                             "description":"lorem ipsum",
-                            "deadLine":"8-dec-2022"
+                            "deadLine":"8-dec-2022",
+                            "assignedTo":"Engneering Team"
                         },
                         "multipleContribution":{
                             "description":"lorem ipsum",
-                            "deadLine":"12-dec-2022"
+                            "deadLine":"12-dec-2022",
+                            "assignedTo":"Construction Team"
                         },
                         "purpose":{
                             "description":"lorem ipsum",
-                            "deadLine":"13-dec-2022"
+                            "deadLine":"13-dec-2022",
+                            "assignedTo":"Designing Team"
                         },
                         "projectTracking":{
                             "description":"lorem ipsum",
-                            "deadLine":"6-dec-2022"
+                            "deadLine":"6-dec-2022",
+                            "assignedTo":"Transportation Coordinator"
                         }    
                     }
                 },
@@ -85,19 +93,23 @@
                     "milestones":{
                         "singleContribution":{
                             "description":"lorem ipsum",
-                            "deadLine":"28-dec-2022"
+                            "deadLine":"28-dec-2022",
+                            "assignedTo":"Engneering Team"
                         },
                         "multipleContribution":{
                             "description":"lorem ipsum",
-                            "deadLine":"31-dec-2022"
+                            "deadLine":"31-dec-2022",
+                            "assignedTo":"Construction Team"
                         },
                         "purpose":{
                             "description":"lorem ipsum",
-                            "deadLine":"6-dec-2022"
+                            "deadLine":"6-dec-2022",
+                            "assignedTo":"Designing Team"
                         },
                         "projectTracking":{
                             "description":"lorem ipsum",
-                            "deadLine":"5-dec-2022"
+                            "deadLine":"5-dec-2022",
+                            "assignedTo":"Transportation Coordinator"
                         }    
                     }
                 }
