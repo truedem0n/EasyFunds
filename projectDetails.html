@@ -30,12 +30,22 @@
     <title>projectDetails</title>
 </head>
 <body>
+        <div id="header"></div>
+        <div style="display: flex; text-align: center;width: 100%;">
+                <div> Applied To
+                    <div id="personal-table"></div>
+                </div>
+                <div style="text-align: center;width: 100%;"> Pending
+                    <div id="personal-table"></div>
+                </div>
+            </div>
     <div id="project_details">
         deatails
         <div id="json_deatils">
 
         </div>
     </div>
+    <div id="footer"></div>
     <script>
     fetch("data.json").then(response => response.json()
     .then(data => ({
@@ -45,13 +55,11 @@
     .then(data=>{
         console.log(data)
     }));
-
     $(document).ready(function(){
         $("#json_deatils").append("<b>Json deatils</b>")
     })
-        
-        
-        
         </script>
+
+
 </body>
 </html>
