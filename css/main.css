@@ -1,0 +1,154 @@
+/* Root CRUD */
+
+:root {
+    --body-color: #444444;
+    --brand-color: #003b24;
+    --dark-brand-color: #003b24;
+    --muted-color: #696969;
+    --header-bg-color: #33aace;
+    --body-bg-color: #aeebfdb7;
+}
+
+
+/* Header CRUD*/
+
+#header {
+    padding: 1.3em;
+    text-align: center;
+    background: var(--header-bg-color);
+}
+
+.nav-item {
+    display: block;
+    font-size: 1.2em;
+}
+
+.brand-link {
+    color: var(--brand-color);
+}
+
+.brand-link:hover {
+    text-decoration: none;
+    color: var(--dark-brand-color);
+}
+
+.header-content {
+    max-width: 100%;
+}
+
+.header-name {
+    color: var(--body-color);
+    font-size: 1.6em;
+}
+
+.first-name {
+    color: var(--brand-color);
+}
+
+
+/* Increase the font size of the heading */
+
+.page-title {
+    font-size: 2.7em;
+    text-align: center;
+    color: var(--brand-color);
+}
+
+body {
+    background-color: var(--body-bg-color);
+}
+
+.my-picture {
+    width: 14em;
+    height: auto;
+    align-items: center;
+}
+
+.index-tab2-font {
+    font-size: 1em;
+    font-family: sans-serif;
+    line-height: 0.75em;
+}
+
+.index-title-color {
+    color: var(--brand-color);
+}
+
+.body-color {
+    color: var(--body-color);
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.brand-btn {
+    color: var(--body-color);
+    background-color: var(--brand-color);
+}
+
+.brand-btn:hover {
+    color: var(--brand-color);
+    background-color: var(--body-color);
+    border-color: var(--brand-color);
+}
+
+.vertical-line-seperator {
+    position: relative;
+    margin: 24px 0px -112px 0;
+    left: 596px;
+    justify-self: start;
+    align-self: start;
+    display: block;
+    border-left: 1px solid rgba(0, 77, 46, 1);
+    height: 475px;
+    width: 0px;
+}
+
+.social-link:hover {
+    text-decoration: none;
+}
+
+.social-link-img {
+    width: 1.875em;
+    height: 1.875em;
+}
+
+.pad-left {
+    padding-left: var(--scale);
+}
+
+.pad-right {
+    padding-right: var(--scale);
+}
+
+.pad-bottom {
+    padding-bottom: var(--scale);
+}
+
+.pad-top {
+    padding-top: var(--scale);
+}
+
+.pad-all {
+    padding: var(--scale);
+}
+
+.form-control {
+    color: var(--body-color);
+}
+
+.form-control:focus {
+    color: var(--body-color);
+}
+
+
+/* Footer CRUD */
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: var(--muted-color);
+}
