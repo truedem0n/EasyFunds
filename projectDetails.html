@@ -37,19 +37,18 @@
         </div>
     </div>
     <script>
-        fetch("data.json").then(response => 
-    response.json()
+    fetch("data.json").then(response => response.json()
     .then(data => ({
         data: data,
         status: response.status
+    }))
+    .then(data=>{
+        console.log(data)
+    }));
+
+    $(document).ready(function(){
+        $("#json_deatils").append("<b>Json deatils</b>")
     })
-)
-.then(data=>{
-    console.log(data)
-}));
-        $(document).ready(function(){
-            $("#json_deatils").append("<b>Json deatils</b>")
-        })
         
         
         
