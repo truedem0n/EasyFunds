@@ -1,0 +1,26 @@
+{
+  "name": "hackingmp2019",
+  "version": "1.0.0",
+  "description": "funding frustration solver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truedem0n/hackingMP2019.git"
+  },
+  "keywords": [
+    "funding"
+  ],
+  "author": "@Atul Mehla, @Soham Tomar, @Samad Charania, @Tirth Patel, @ Eshu Thakur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/truedem0n/hackingMP2019/issues"
+  },
+  "homepage": "https://github.com/truedem0n/hackingMP2019#readme",
+  "dependencies": {
+    "aws-sdk": "^2.562.0",
+    "tabulator": "^0.2.40"
+  }
+}
