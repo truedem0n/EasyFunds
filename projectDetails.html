@@ -26,14 +26,7 @@
     <script src="javascript/scripts.js"></script>
     <!-- <script src="javascript/tables/fake-data/data.js"></script> -->
     
-    <script>
-    $(document).ready(function(){
-        $("#json_deatils").append("<b>Json deatils</b>")
-    })
-    
-    
-    
-    </script>
+
     <title>projectDetails</title>
 </head>
 <body>
@@ -43,5 +36,26 @@
 
         </div>
     </div>
+    <script>
+        fetch("data.json").then(response => 
+    response.json()
+    .then(data => ({
+        data: data,
+        status: response.status
+    })
+)
+.then(data=>{
+    console.log(data)
+})
+.then(res => {
+    console.log(res.status, res.data.title)
+}));
+        $(document).ready(function(){
+            $("#json_deatils").append("<b>Json deatils</b>")
+        })
+        
+        
+        
+        </script>
 </body>
 </html>
