@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    
+        <link rel="icon" type="image/ico/png" href="resources/images/favicon.png" />
+        <meta name="description" content="Fund Seeker, A web app to find and give funds">
+        <meta name="keywords" content="Funds Track,Fund,Seeker,Sponsor">
+        <meta name="author" content="Samad alias Nyein Chan">
+        <meta name="robots" content="index, nofollow" />
+    
+        <!-- JQuery JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+        <!-- <script src="javascript/tables/fake-data/data.js"></script> -->
+    
+        <title>Fund Givers</title>
+    </head>
+<body>
+    <div id="header"></div>
+
+    <div style="max-width: 800px;margin:auto; display: flex; flex-direction: column;padding-top:50px;">
+            <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Project name</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter project name">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Project description</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter project description">
+                    </div>
+                    <button type="submit" class="btn btn-primary"><a href="projectDetails.html">Create</a>
+                    </button>
+                  </form>
+    </div>
+
+    <div id="footer"></div>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    $("#header").load("/reusables/header.html");
+    $("#footer").load("/reusables/footer.html");
+});</script>
+</body>
+</html>
