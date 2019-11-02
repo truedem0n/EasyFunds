@@ -32,161 +32,110 @@
     
     <!------ Include the above in your HEAD tag ---------->
     
+    <button type="button" class="btn btn-primary" style="position:absolute;top:15vh;right:10vh;z-index: 2;">Create Milestone</button>
+
     <div class="container-fluid">
         <div class="row">
             <div id="timeline">
-                 <!--<div class="row timeline-movement timeline-movement-top">
+                <div class="row timeline-movement timeline-movement-top">
                     <div class="timeline-badge timeline-future-movement">
-                            <p>2018</p>
+                            <p>2019</p>
                     </div>
                 </div>
-                <div class="row timeline-movement">
-                    <div class="timeline-badge center-left">
+                <script>
+                    function reply_click(clicked_id)
+                    {
+                        console.log(clicked_id);
+                        localStorage.setItem("fundingID",clicked_id);
+                    }
+                        fetch("data.json").then(response => response.json()
+                    .then(data => ({
+                        data: data,
+                        status: response.status
+                    }))
+                    .then(data=>{
                         
-                    </div>
-                    <div class="col-sm-6  timeline-item">
-                        <div class="row">
-                            <div class="col-sm-11">
-                                <div class="timeline-panel credits  anim animate fadeInLeft">
-                                    <ul class="timeline-panel-ul">
-                                        <div class="lefting-wrap">
-                                            <li class="img-wraping"><a href="#"><img src="http://via.placeholder.com/250/000000" class="img-responsive" alt="user-image" /></a></li>
-                                        </div>
-                                        <div class="righting-wrap">
-                                            <li><a href="#" class="importo">Mussum ipsum cacilds</a></li>
-                                            <li><span class="causale" style="color:#000; font-weight: 600;">Developer </span> </li>
-                                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                                            <li><p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 13/01/2018, 13:05"</small></p> </li>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </ul>
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-    
-                <!--<div class="row timeline-movement">
-                    <div class="timeline-badge center-right">
+                        for(var keys in data.data.projects){
+                            //let projects = data.data.projects
+                            
+                            if (keys==localStorage.getItem("key")){
+                                let currentData=data.data.projects[keys].funds.fund1["2019"].milestones
+                                console.log(currentData)
+                                let currentMilesones=[];
+                                for(var miles in currentData){
+                                    currentMilesones.push(miles);
+                                }
+                                for(let i=0;i<currentMilesones.length;i++){
+                                    $("#timeline").append(`<div class="row timeline-movement">
+                                    <div class="timeline-badge center-left">
+                                    </div>
+                                    <div class="col-sm-6  timeline-item">
+                                        <div class="row">
+                                            <div class="col-sm-11">
+                                                <div class="timeline-panel credits  anim animate fadeInLeft">
+                                                    <ul class="timeline-panel-ul">
+                                                        <div class="lefting-wrap">
+                                                            <li class="img-wraping"><a href="./editTimeline.html" id="${currentMilesones[i]}" onClick="reply_click(this.id)"><img src="http://via.placeholder.com/250/000000" class="img-responsive" alt="user-image" /></a></li>
+                                                        </div>
+                                                        <div class="righting-wrap">
+                                                            <li><a href="./editTimeline.html" id="${currentMilesones[i]}" onClick="reply_click(this.id)" class="importo">Mussum ipsum cacilds</a></li>
+                                                            <li><span class="causale" style="color:#000; font-weight: 600;">Developer </span> </li>
+                                                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
+                                                            <li><p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 13/01/2018, 13:05"</small></p> </li>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </ul>
+                                                </div>
                     
-                    </div>
-                    <div class="offset-sm-6 col-sm-6  timeline-item">
-                        <div class="row">
-                            <div class="offset-sm-1 col-sm-11">
-                                <div class="timeline-panel debits  anim animate  fadeInRight">
-                                    <ul class="timeline-panel-ul">
-                                        <div class="lefting-wrap">
-                                            <li class="img-wraping"><a href="#"><img src="http://via.placeholder.com/250/000000" class="img-responsive" alt="user-image" /></a></li>
+                                            </div>
                                         </div>
-                                        <div class="righting-wrap">
-                                            <li><a href="#" class="importo">Mussum ipsum cacilds</a></li>
-                                            <li><span class="causale" style="color:#000; font-weight: 600;">Web Designer </span> </li>
-                                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                                            <li><p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 12/01/2018, 13:05"</small></p> </li>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </ul>
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="row timeline-movement">
-                    <div class="timeline-badge center-left">
-                        
-                    </div>
-                    <div class="col-sm-6  timeline-item">
-                        <div class="row">
-                            <div class="col-sm-11">
-                                <div class="timeline-panel credits  anim animate  fadeInLeft">
-                                    <ul class="timeline-panel-ul">
-                                        <div class="lefting-wrap">
-                                            <li class="img-wraping"><a href="#"><img src="http://via.placeholder.com/250/000000" class="img-responsive" alt="user-image" /></a></li>
-                                        </div>
-                                        <div class="righting-wrap">
-                                            <li><a href="#" class="importo">Mussum ipsum cacilds</a></li>
-                                            <li><span class="causale" style="color:#000; font-weight: 600;">Engineer </span> </li>
-                                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                                            <li><p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11/01/2018, 13:05"</small></p> </li>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </ul>
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-                
-                <!--<div class="row timeline-movement timeline-movement-top">
-                    <div class="timeline-badge timeline-future-movement">
-                            <p>2017</p>
-                    </div>
-                </div>
-                
-                
-                <div class="row timeline-movement">
-                    <div class="timeline-badge center-right">
+                                    </div>
+                                </div>`)
+                                if (i<=currentMilesones.length-1)
+                                {
+                                    i++;
+                                    $("#timeline").append(`<div class="row timeline-movement">
+                                    <div class="timeline-badge center-right">
+                                    </div>
+                                    <div class="offset-sm-6 col-sm-6  timeline-item">
+                                        <div class="row">
+                                            <div class="offset-sm-1 col-sm-11">
+                                                <div class="timeline-panel debits  anim animate  fadeInRight">
+                                                    <ul class="timeline-panel-ul">
+                                                        <div class="lefting-wrap">
+                                                            <li class="img-wraping"><a href="./editTimeline.html" id="${currentMilesones[i]}" onClick="reply_click(this.id)"><img src="http://via.placeholder.com/250/000000" class="img-responsive" alt="user-image" /></a></li>
+                                                        </div>
+                                                        <div class="righting-wrap">
+                                                            <li><a href="./editTimeline.html" id="${currentMilesones[i]}" onClick="reply_click(this.id)" class="importo">Mussum ipsum cacilds</a></li>
+                                                            <li><span class="causale" style="color:#000; font-weight: 600;">Web Designer </span> </li>
+                                                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
+                                                            <li><p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 12/01/2018, 13:05"</small></p> </li>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </ul>
+                                                </div>
                     
-                    </div>
-                    <div class="offset-sm-6 col-sm-6  timeline-item">
-                        <div class="row">
-                            <div class="offset-sm-1 col-sm-11">
-                                <div class="timeline-panel debits  anim animate  fadeInRight">
-                                    <ul class="timeline-panel-ul">
-                                        <div class="lefting-wrap">
-                                            <li class="img-wraping"><a href="#"><img src="http://via.placeholder.com/250/000000" class="img-responsive" alt="user-image" /></a></li>
+                                            </div>
                                         </div>
-                                        <div class="righting-wrap">
-                                            <li><a href="#" class="importo">Mussum ipsum cacilds</a></li>
-                                            <li><span class="causale" style="color:#000; font-weight: 600;">Web Designer </span> </li>
-                                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                                            <li><p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 12/01/2018, 13:05"</small></p> </li>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </ul>
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="row timeline-movement">
-                    <div class="timeline-badge center-left">
+                                    </div>
+                                </div>`)
+                                }
+                            }
+                                
+                                
+                            }
+                            
+                        }
                         
-                    </div>
-                    <div class="col-sm-6  timeline-item">
-                        <div class="row">
-                            <div class="col-sm-11">
-                                <div class="timeline-panel credits  anim animate  fadeInLeft">
-                                    <ul class="timeline-panel-ul">
-                                        <div class="lefting-wrap">
-                                            <li class="img-wraping"><a href="#"><img src="http://via.placeholder.com/250/000000" class="img-responsive" alt="user-image" /></a></li>
-                                        </div>
-                                        <div class="righting-wrap">
-                                            <li><a href="#" class="importo">Mussum ipsum cacilds</a></li>
-                                            <li><span class="causale" style="color:#000; font-weight: 600;">Engineer </span> </li>
-                                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                                            <li><p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11/01/2018, 13:05"</small></p> </li>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+                        
+                    }));
+                    </script>
             </div>
         </div>
     </div>
     <div id="footer"></div>
 
-    <script src="javascript/milestoneTimeline.js"></script>
+    
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -194,61 +143,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha38
     4-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script>
-        fetch("data.json").then(response => response.json()
-    .then(data => ({
-        data: data,
-        status: response.status
-    }))
-    .then(data=>{
-        
-        for(var keys in data.data.projects){
-            //let projects = data.data.projects
-            
-            if (keys==localStorage.getItem("key")){
-                let currentData=data.data.projects[keys].funds.fund1["2019"].milestones
-                console.log(currentData)
-                $("#timeline").append(`<div class="row timeline-movement timeline-movement-top">
-                    <div class="timeline-badge timeline-future-movement">
-                            <p>2018</p>
-                    </div>
-                </div>`)
-                for(var miles in currentData){
-                    console.log(miles)
-                    $("#timeline").append(`<div class="row timeline-movement">
-                    <div class="timeline-badge center-left">
-                    </div>
-                    <div class="col-sm-6  timeline-item">
-                        <div class="row">
-                            <div class="col-sm-11">
-                                <div class="timeline-panel credits  anim animate fadeInLeft">
-                                    <ul class="timeline-panel-ul">
-                                        <div class="lefting-wrap">
-                                            <li class="img-wraping"><a href="#"><img src="http://via.placeholder.com/250/000000" class="img-responsive" alt="user-image" /></a></li>
-                                        </div>
-                                        <div class="righting-wrap">
-                                            <li><a href="#" class="importo">Mussum ipsum cacilds</a></li>
-                                            <li><span class="causale" style="color:#000; font-weight: 600;">Developer </span> </li>
-                                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                                            <li><p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 13/01/2018, 13:05"</small></p> </li>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </ul>
-                                </div>
     
-                            </div>
-                        </div>
-                    </div>
-                </div>`)
-                }
-                
-                
-                }
-            
-        }
-        
-        
-    }));
-    </script>
+    <script async delay src="javascript/milestoneTimeline.js"></script>
 </body>
 </html>

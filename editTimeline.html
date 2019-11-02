@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <link rel="icon" type="image/ico/png" href="resources/images/favicon.png" />
+    <meta name="description" content="Fund Seeker, A web app to find and give funds">
+    <meta name="keywords" content="Funds Track,Fund,Seeker,Sponsor">
+    <meta name="author" content="Samad alias Nyein Chan">
+    <meta name="robots" content="index, nofollow" />
+
+    <!-- JQuery JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Personal Scripts -->
+    <script src="javascript/scripts.js"></script>
+    <!-- <script src="javascript/tables/fake-data/data.js"></script> -->
+
+    <title>Fund Givers</title>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div style="max-width:800px;margin:auto;margin-top:100px;">
+        <div style="font-size: 3em;text-align:center;">Edit milestone</div>
+        <form action="/action_page.php">
+            <div class="form-group">
+              <label for="usr">Name:</label>
+              <input type="text" class="form-control" id="usr" name="username">
+            </div>
+            <div class="form-group">
+                <label for="comment">Description:</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+              </div>
+            <div class="form-group">
+                <label for="usr">Due on:</label>
+                <input type="date" class="form-control" id="usr" name="username">
+              </div>
+            <div class="form-group">
+              <label for="pwd">Assigned To:</label>
+              <input type="text" class="form-control" id="pwd" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        
+        <div id="milestoneName" style="font-size: 2em;"><br></div>
+
+        
+        <div id="assignedTo"></div>
+        <div id="description"></div>
+    </div>
+    
+    <div id="footer"></div>
+
+
+
+
+   
+    <script>
+      fetch("data.json").then(response => response.json()
+        .then(data => ({
+        data: data,
+        status: response.status
+         }))
+        .then(data=>{ 
+            
+            $(document).ready(function(){
+            $("#milestoneName").append(``)
+            $("#deadline").append(``)
+            $("#assignedTo").append(``)
+            $("#description").append(``)
+        })
+        }));
+
+    </script>
+</body>
+
+</html
