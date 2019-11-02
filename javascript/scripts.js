@@ -1,7 +1,7 @@
 // JQuery stuff:
 $(document).ready(function() {
     $("#header").load("reusables/header.html");
-    $("#footer").load("reusables/footer.html");
+
     $("#footer").load("login.html");
 });
 
