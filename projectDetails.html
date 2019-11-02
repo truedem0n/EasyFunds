@@ -30,8 +30,8 @@
     <title>projectDetails</title>
 </head>
 <body>
-    <div id="project_details">
-        deatails
+    <div class = "container" id="project_details">
+        Details
         <div id="json_deatils">
 
         </div>
@@ -43,11 +43,19 @@
         status: response.status
     }))
     .then(data=>{
-        console.log(data)
+        
+        for(var keys in data.data.projects){
+            let projects = data.data.projects
+            console.log(keys)
+            $("#json_deatils").append("<div class = 'container'>"+projects+'<div>')
+            
+        }
+        
+        
     }));
 
     $(document).ready(function(){
-        $("#json_deatils").append("<b>Json deatils</b>")
+        
     })
         
         
