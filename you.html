@@ -30,14 +30,14 @@
 <body>
     <div id="header"></div>
 
-    <div style="display: flex; text-align: center;width: 100%;">
+    <!-- <div style="display: flex; text-align: center;width: 100%;">
         <div> Applied To
             <div id="personal-table"></div>
         </div>
         <div style="text-align: center;width: 100%;"> Pending
             <div id="personal-table"></div>
         </div>
-    </div>
+    </div> -->
     <div id="projects" style="display: flex; flex-wrap: wrap;">
         <div style="display: flex; margin: 15px;;">
             <div class="card" style="width: 15rem;">
@@ -101,7 +101,7 @@
                 <div class="card-body">
                   <h5 class="card-title">${key}</h5>
                   <p class="card-text">${data["data"]["projects"][key]["description"]}</p>
-                  <a href="#" class="btn btn-primary">See details</a>
+                  <a href="projectDetails.html" class="btn btn-primary">See details</a>
                 </div>
               </div>
         </div>`)
