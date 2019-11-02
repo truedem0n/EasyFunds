@@ -17,6 +17,7 @@ var seekers_table =
             {title:"Name", field:"name", frozen:true},
             {title:"Max Amount", field:"amount", align:"left", sorter:"number", frozen:true},
             {title:"Negotiable", field:"negotiable", sorter:"boolean"},
-            {title:"Date Created", field:"date", sorter:"date"}
+            {title:"Date Created", field:"date", sorter:"date"},
+            {title:"Deadline", field:"date", sorter:"date"}
         ],
     });

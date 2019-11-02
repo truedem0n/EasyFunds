@@ -31,14 +31,28 @@
 </head>
 <body>
         <div id="header"></div>
-        <div style="display: flex; text-align: center;width: 100%;">
-                <div> Applied To
-                    <div id="personal-table"></div>
-                </div>
-                <div style="text-align: center;width: 100%;"> Pending
-                    <div id="personal-table"></div>
+            <div style="margin:auto;max-width: 800px;padding: 20px;display: flex;;">
+                <div id="projectName"></div>
+                <div style="width:50%; justify-content: center;margin: auto;;">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="83"
+                        aria-valuemin="0" aria-valuemax="100" style="width:83%">
+                        Requirement Met  83%
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div style="margin:auto;max-width: 800px;padding: 20px;display: flex;flex-direction: column;;">
+                Fundings
+                <div> 
+                    <div id="personal-table"></div>
+                </div>
+                <div style="text-align: center;width: 100%;"> 
+                    <div id="personal-table"></div>
+                </div>
+            </div> 
+             
+
     <div id="footer"></div>
     <!-- Tabulator -->
     <link href="https://unpkg.com/tabulator-tables@4.4.3/dist/css/tabulator.min.css" rel="stylesheet">
@@ -60,8 +74,18 @@
     .then(data=>{
         
         for(var keys in data.data.projects){
-            let projects = data.data.projects
-            $("#json_deatils").append("<div class = 'container'>"+projects+'<div>')
+            //let projects = data.data.projects
+            if (keys==localStorage.getItem("key")){
+                
+                values = Object.values(data.data.projects)
+                keys=keys.charAt(0).toUpperCase()+keys.substring(1)
+                $("#projectName").append("<div class style=\"font-size:3em;\" 'container'>"+keys+'<div>')
+                    console.log(values)
+                    //for(i in values){
+                    $("#projectName").append("<div class style=\"font-size:3em;\" 'container'>"+values[i]+'<div>')
+                //}
+                
+                }
             
         }
         
