@@ -21,6 +21,7 @@
   "homepage": "https://github.com/truedem0n/hackingMP2019#readme",
   "dependencies": {
     "aws-sdk": "^2.562.0",
+    "frappe-gantt": "^0.3.0",
     "surge": "^0.21.3",
     "tabulator": "^0.2.40",
     "tabulator-tables": "^4.4.3"
