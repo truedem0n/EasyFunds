@@ -37,13 +37,13 @@ var MONEY_FORMAT = { symbol: "$" };
 var TODAY = new Date().toJSON().slice(0, 10);
 
 var personal_columns = [
-    { title: "Type", field: "type", editorParams: { values: [SEEKING, GIVING] } },
+    { title: "Name", field: "type", editorParams: { values: [SEEKING, GIVING] } },
     { title: "Amount", field: "amount", align: "left", sorter: "number", formatter: "money", formatterParams: MONEY_FORMAT, editable: true },
-    { title: "Negotiable", field: "negotiable", sorter: "boolean", formatter: "tickCross" },
+    { title: "Approved", field: "negotiable", sorter: "boolean", formatter: "tickCross" },
     { title: "Website", field: "website", editable: true, formatter: "link", formatterParams: LINK_FORMAT },
-    { title: "Email", field: "email", editable: true, formatter: "link", formatterParams: EMAIL_FORMAT },
+    { title: "ToDelete", field: "email", editable: true, formatter: "link", formatterParams: EMAIL_FORMAT },
     { title: "Date Created", field: "date", sorter: "date", editable: true },
-    { title: "Expiry Date", field: "expiry", sorter: "date", editable: true }
+    { title: "Deadline", field: "expiry", sorter: "date", editable: true }
 ];
 
 
