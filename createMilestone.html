@@ -31,23 +31,23 @@
     <div id="header"></div>
 
     <div style="max-width:800px;margin:auto;margin-top:100px;">
-        <div style="font-size: 3em;text-align:center;">Edit milestone</div>
-        <form action="/action_page.php">
+        <div style="font-size: 3em;text-align:center;">Create Milestone</div>
+        <form action="#">
             <div class="form-group">
-              <label for="usr">Name:</label>
-              <input type="text" class="form-control" id="usr" name="username">
+              <label for="Name">Name:</label>
+              <input type="text" class="form-control" id="name" name="name">
             </div>
             <div class="form-group">
-                <label for="comment">Description:</label>
-                <textarea class="form-control" rows="5" id="comment"></textarea>
+                <label for="description">Description:</label>
+                <textarea class="form-control" rows="5" id="description"></textarea>
               </div>
             <div class="form-group">
-                <label for="usr">Due on:</label>
-                <input type="date" class="form-control" id="usr" name="username">
+                <label for="DeadLine">DeadLine:</label>
+                <input type="date" class="form-control" id="DeadLine" name="DeadLine">
               </div>
             <div class="form-group">
-              <label for="pwd">Assigned To:</label>
-              <input type="text" class="form-control" id="pwd" name="password">
+              <label for="assinedTo">Assigned To:</label>
+              <input type="text" class="form-control" id="assinedTo" name="assinedTo">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -65,7 +65,7 @@
 
 
    
-    <script>
+    <!-- <script>
       fetch("data.json").then(response => response.json()
         .then(data => ({
         data: data,
@@ -81,7 +81,7 @@
         })
         }));
 
-    </script>
+    </script> -->
 </body>
 
 </html>
