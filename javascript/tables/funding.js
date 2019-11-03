@@ -4,16 +4,16 @@ var TODAY = new Date().toJSON().slice(0, 10);
 var APPLIED = false;
 //takes in jsonFake variable and returns soemthing like wanted variable
 
-        for(let keys in data.data){
-            let thisData=data.data[keys]
-            for(let Idees=0;Idees<Object.keys(thisData).length;Idees++){
-                if(actualData.length<Idees+1){
-                    actualData.push({id:Idees,Name:thisData[Idees],Date:TODAY, Applied:APPLIED})
-                }else{
-                    actualData[Idees][keys]=thisData[Idees];
-                }
-            }
+for(let keys in data.data){
+    let thisData=data.data[keys]
+    for(let Idees=0;Idees<Object.keys(thisData).length;Idees++){
+        if(actualData.length<Idees+1){
+            actualData.push({id:Idees,Name:thisData[Idees],Date:TODAY, Applied:APPLIED})
+        }else{
+            actualData[Idees][keys]=thisData[Idees];
         }
+    }
+}
 
     
 
