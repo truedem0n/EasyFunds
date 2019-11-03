@@ -2,8 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Simple Gantt</title>
+    <title>Simple Gantt</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <link rel="icon" type="image/ico/png" href="resources/images/favicon.png" />
+    <meta name="description" content="Fund Seeker, A web app to find and give funds">
+    <meta name="keywords" content="Funds Track,Fund,Seeker,Sponsor">
+    <meta name="author" content="Samad alias Nyein Chan">
+    <meta name="robots" content="index, nofollow" />
+
+    <!-- JQuery JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Personal Scripts -->
+    <script src="javascript/scripts.js"></script>
 	<style>
+
 		body {
 			font-family: sans-serif;
 			background: #ccc;
@@ -11,7 +32,7 @@
 		.container {
             width: 100%;
             height: 100%;
-			margin: 0 auto;
+			margin: 0 0;
 		}
 		/* custom class */
 		.gantt .bar-milestone .bar {
@@ -46,10 +67,13 @@
 <body>
     <div id="header"></div>
     <div class="gantt-target"></div>
+<<<<<<< HEAD
 	<div class="container">
 		
 		
 	</div>
+=======
+>>>>>>> b1b765020f035d2cc4a937d0753b955c773d5aae
 	<script>
 		var tasks = [
 			{
@@ -272,19 +296,25 @@
 			},
 			view_mode: 'Month',
             language: 'en',
-            header_height: 50,
-            column_width: 30,
-            step: 24,
-            view_modes: ['Quarter Day', 'Half Day', 'Day', 'Week', 'Month'],
-            bar_height: 20,
-            bar_corner_radius: 3,
-            arrow_curve: 5,
-            padding: 18,  
-            date_format: 'YYYY-MM-DD',
-            custom_popup_html: null
+           // header_height: 50,
+            //column_width: 30,
+            //step: 24,
+            //view_modes: ['Quarter Day', 'Half Day', 'Day', 'Week', 'Month'],
+            // bar_height: 20,
+            // bar_corner_radius: 3,
+            // arrow_curve: 5,
+            // padding: 18,
+            date_format: 'YYYY-MM-DD'
+            // custom_popup_html: null
 		});
+<<<<<<< HEAD
 		console.log(gantt_chart);
     </script>
     <div id="footer"></div>
+=======
+        //console.log(gantt_chart);
+        
+	</script>
+>>>>>>> b1b765020f035d2cc4a937d0753b955c773d5aae
 </body>
 </html>
