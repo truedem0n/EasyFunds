@@ -1,3 +1,18 @@
+var jsonFake = {
+    "Name": {"0":"name0", "1":"name1"},
+    "Description": {"0": "desc0", "1": "desc1"}
+}
+
+var wanted = [
+    {id: 0, name: "name0", description: "desc0"},
+    {id: 1, name: "name1", description: "desc1"}
+]
+
+//takes in jsonFake variable and returns soemthing like wanted variable
+var toImplement = function name(params) {
+    
+}
+
 var funding = [{
     id: 1,
     type: "Seeking",
