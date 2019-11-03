@@ -3,7 +3,7 @@ var personal = [{
         type: "Seeking",
         amount: 5000,
         negotiable: true,
-        website: "https://www.cs.mun.ca/~samadanc/website_prototype",
+        website: "../../milestoneTimeline.html",
         email: "charaniasamad@gmail.com",
         date: "22-10-2019",
         expiry: "22-10-2020"
@@ -13,7 +13,7 @@ var personal = [{
         type: "Seeking",
         amount: 7000,
         negotiable: false,
-        website: "https://www.cs.mun.ca/~samadanc/",
+        website: "../../milestoneTimeline.html",
         email: "charaniasamad@gmail.com",
         date: "02-09-2019",
         expiry: "22-10-2020"
@@ -29,7 +29,7 @@ var ROWS_PER_PAGE = 20;
 var LAYOUT = "fitDataFill";
 
 //Formatter parameters:
-var LINK_FORMAT = { label: "LINK", target: "_blank" };
+var LINK_FORMAT = { label: "LINK", target: "" };
 var EMAIL_FORMAT = { urlPrefix: "mailto:" };
 var MONEY_FORMAT = { symbol: "$" };
 
