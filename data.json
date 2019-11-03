@@ -1,9 +1,9 @@
 {
     "projects":{
-        "project1":{
+        "Building Park":{
             "mainDeadline":"23-nov-2018",
             "mainSupervisor":"john doe",
-            "description":"lroem ipsum",
+            "description":"A park focused on growing seniors social engagement and fun area for children.",
             "funds":{
                 "fund1":{
                     "staus":true,
@@ -62,10 +62,10 @@
                 
             }
         },
-        "project2":{
+        "Automated Garbage":{
             "mainDeadline":"23-nov-2018",
             "mainSupervisor":"jane doe",
-            "description":"lroem ipsum",
+            "description":"Make garbage collection system automated.",
             "funds":{
                 "fund1":{
                     "staus":true,
@@ -123,6 +123,68 @@
                 }
                 
             }
-    }
+    },
+    "Heated sidewalks":{
+        "mainDeadline":"23-nov-2018",
+        "mainSupervisor":"jane doe",
+        "description":"Prevent winter injuries, safer walking, and enhanced Mount Pearl's technological capabilities.",
+        "funds":{
+            "fund1":{
+                "staus":true,
+                "2019":{
+                    "milestones":{
+                        "singleContribution":{
+                            "description":"lorem ipsum",
+                            "deadLine":"5-dec-2022",
+                            "assignedTo":"Engneering Team"
+                        },
+                        "multipleContribution":{
+                            "description":"lorem ipsum",
+                            "deadLine":"5-dec-2022",
+                            "assignedTo":"Construction Team"
+                        },
+                        "purpose":{
+                            "description":"lorem ipsum",
+                            "deadLine":"23-dec-2022",
+                            "assignedTo":"Designing Team"
+                        },
+                        "projectTracking":{
+                            "description":"lorem ipsum",
+                            "deadLine":"31-dec-2022",
+                            "assignedTo":"Transportation Coordinator"
+                        }   
+                } 
+                }
+            },
+            "fund2":{
+                "staus":true,
+                "2019":{
+                    "milestones":{
+                        "singleContribution":{
+                            "description":"lorem ipsum",
+                            "deadLine":"5-dec-2022",
+                            "assignedTo":"Engneering Team"
+                        },
+                        "multipleContribution":{
+                            "description":"lorem ipsum",
+                            "deadLine":"5-dec-2022",
+                            "assignedTo":"Construction Team"
+                        },
+                        "purpose":{
+                            "description":"lorem ipsum",
+                            "deadLine":"23-dec-2022",
+                            "assignedTo":"Designing Team"
+                        },
+                        "projectTracking":{
+                            "description":"lorem ipsum",
+                            "deadLine":"31-dec-2022",
+                            "assignedTo":"Transportation Coordinator"
+                        }   
+                } 
+                }
+            }
+            
+        }
+}
 }
 }

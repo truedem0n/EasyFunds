@@ -1,7 +1,7 @@
 var personal = [{
         id: 1,
-        type: "Seeking",
-        amount: 5000,
+        type: "Park for senior citizen fund",
+        amount: 100000,
         negotiable: true,
         website: "../../milestoneTimeline.html",
         email: "charaniasamad@gmail.com",
@@ -10,8 +10,8 @@ var personal = [{
     },
     {
         id: 2,
-        type: "Seeking",
-        amount: 7000,
+        type: "Children play area fund",
+        amount: 25000,
         negotiable: false,
         website: "../../milestoneTimeline.html",
         email: "charaniasamad@gmail.com",
@@ -40,7 +40,7 @@ var personal_columns = [
     { title: "Name", field: "type", editorParams: { values: [SEEKING, GIVING] } },
     { title: "Amount", field: "amount", align: "left", sorter: "number", formatter: "money", formatterParams: MONEY_FORMAT, editable: true },
     { title: "Approved", field: "negotiable", sorter: "boolean", formatter: "tickCross" },
-    { title: "Website", field: "website", editable: true, formatter: "link", formatterParams: LINK_FORMAT },
+    { title: "Milestones", field: "website", editable: true, formatter: "link", formatterParams: LINK_FORMAT },
     { title: "ToDelete", field: "email", editable: true, formatter: "link", formatterParams: EMAIL_FORMAT },
     { title: "Date Created", field: "date", sorter: "date", editable: true },
     { title: "Deadline", field: "expiry", sorter: "date", editable: true }
